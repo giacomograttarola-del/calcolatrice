@@ -25,24 +25,24 @@ function dividi(a, b) {
 function calcola(operazione) {
     let num1 = document.getElementById('val1').value;
     let num2 = document.getElementById('val2').value;
-    operazione = Number(operazione);
+    operazione = parseInt(operazione);
 
     let Result;
     switch (operazione) {
         case 1: // somma
-            Result = somma(Number(num1), Number(num2));
+            Result = somma(parseFloat(num1), parseFloat(num2));
             document.getElementById('result').innerText = Result;
             break;
         case 3: // sottrazione
-            Result = sottrai(Number(num1), Number(num2));
+            Result = sottrai(parseFloat(num1), parseFloat(num2));
             document.getElementById('result').innerText = Result;
             break;
         case 2: // moltiplicazione
-            Result = moltiplica(Number(num1), Number(num2));
+            Result = moltiplica(parseFloat(num1), parseFloat(num2));
             document.getElementById('result').innerText = Result;
             break;
         case 4: // divisione con gestione della divisione per zero (vedi dividi())
-                Result = dividi(Number(num1), Number(num2));
+                Result = dividi(parseFloat(num1), parseFloat(num2));
                 document.getElementById('result').innerText = Result;
             break;
         default: //default in caso di errore di tipo operazione
